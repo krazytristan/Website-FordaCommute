@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.home {
+    width: 100%;
+    height: 90%;
+    max-height: 1350px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5.9rem;
+    background: url("../images/home-bg.png") no-repeat center center/cover; 
+}
+.home .left{
+    height: 100vh;
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .left img{
+    width: 100vw;
+    height: 100vh;
+    animation: app 0.8s linear alternate infinite;
+    position: relative;
+    top:-10%;
+}
+
+.home .right{
+    height: 100vh;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 5%;
+}
+.home .right .right-text{
+    color: white;
+    position: relative;
+    width: 100%;
+    top:-15%;
+    text-align: end;
+    line-height: 3.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-right: 5px solid white;
+    padding-right: 1rem;
+}
+.home .right .right-text p1{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+.home .right .right-text p2{
+    font-size: 9rem;
+    text-shadow: 5px 5px 18px #000000;
+}
+.home .right .right-text p3{
+    font-size: 7.5rem;
+    text-shadow: 5px 5px 18px #000000;
+}
+.home .right .right-text p4{
+    font-size: 8rem;
+    text-shadow: 5px 5px 18px #000000;
+}
+
+.home .right .download{
+    width: 100%;
+    text-align: end;
+    
+}
+.home .right .download p,a{
+    position: relative;
+    right: 2rem;
+    
+}
+.home .right .download p{
+    color: white;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.home .right .download a{
+    padding:0.5rem;
+    color: black;
+    text-decoration: none;
+    background-color: #F4BE25;
+    font-weight: bolder;
+    font-size: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+
+@keyframes app {
+    0% {
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+
+
+
+
+/*
+.home .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    max-height: 820px;
+}
+.home .left h1 {
+    font-size: 3.2rem;
+    font-weight: 550;
+    margin-bottom: 2.5rem;
+    line-height: 5rem;
+    word-break: break-word;
+}
+.home .left h1 span {
+    color: var(--cold);
+}
+.home .left p {
+    font-size: 1.2rem;
+    color: gray;
+    max-width: 600px;
+    text-align: justify;
+}
+.home .left a {
+    margin-top: 1.5rem;
+    text-decoration: none;
+    background: var(--gradient);
+    color: #ffff;
+    padding: 0.9rem 2.3rem;
+    border-radius: 2rem;
+}
+.home .right img {
+    max-height: 35rem;
+    max-width: 35rem;
+    position: relative;
+    top: 2%;
+    left: 25%;
+    animation: app 0.8s linear alternate infinite;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 2rem;
+}
+
+@keyframes app {
+    0% {
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto-fill);
+        grid-template-areas:
+        "image"
+        "content";
+        height: 100%;
+        padding-bottom: 1rem;
+    }
+    .home .left {
+        grid-area: content;
+        justify-content: unset;
+    }
+    .home .right {
+        grid-area: image;
+        margin: auto;
+    }
+    .home .right img {
+        max-height: 20rem;
+        max-width: 20rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .home {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto-fill);
+        grid-template-areas:
+        "image"
+        "content";
+        height: 100%;
+        padding-bottom: 1rem;
+    }
+    .home .right img {
+        max-height: 15rem;
+        max-width: 15rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .home {
+        height: 100%;
+    }
+    .home .left h1 {
+        font-size: 2.5rem;
+        word-break: break-word;
+    }
+    .home .left a {
+        padding: 0.5rem 1rem;
+        margin-top: 0.7rem;
+    }
+}
+
+*/

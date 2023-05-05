@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FordaCommute Mapbox</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <!-- MAP-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- SEARCH-->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.0/mapbox-gl.js"></script>
+
+    <!-- GeoCoder Plugins-->
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+        type="text/css">
+
+    <!-- JS FILES-->
+    <script src="./js/accessToken.js"></script>
+    <script src="./js/mapbox.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .options{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-right: 15px;
+            margin-bottom: 25px;
+            width: 600px;
+            height: 250px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+            border-radius: 5%;
+            z-index: 9;
+
+            display: flex;
+        }
+
+        .view_routes, .view_terminals{
+            width: 50%;
+        }
+
+        .view_routes h2, .view_terminals h2{
+            color: black;
+            text-align: center;
+        }
+
+        .view_terminals{
+            float: left;
+        }
+
+        .puj{
+            flex-direction: column;
+            display: flex;
+            align-self: center;
+            align-content: center;
+            margin-top: -40px;
+        }
+
+        .jeep, .bus {
+            width: 90%;
+            margin: 0px auto ;
+        }
+
+        .jeep_container, .bus_container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .bus{
+            margin-top: 10px;
+        }
+
+        .puj .jeep h3, .puj .bus h3{
+            color: black;
+            text-align: center; 
+        }
+
+        .button {
+            padding: 10px;
+            width: 25%;
+            background-color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+            z-index: 1;
+            margin-bottom: 10px;
+        }
+
+        .button:active {
+            background-color: rgb(106, 106, 106);
+            color: rgb(255, 255, 255);
+        }
+
+        .marker {
+            display: none;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div id="map"></div>
+    <div class="options">
+            <div class="view_routes">
+                <h2>VIEW ROUTES</h2>
+                <div class="puj">
+                    <div class="jeep">
+                        <h3>Jeep</h3>
+                        <div class="jeep_container">
+                            <button id="alangilan" class="button">Alangilan</button>
+                            <button id="#" class="button">Balagtas</button>
+                            <button id="capitolio" class="button">Capitolio </button>
+                            <button id="bauan" class="button">Bauan </button>
+                        </div>
+                    </div>
+                    <div class="bus">
+                        <h3>Bus</h3>
+                        <div class="bus_container">
+                            <button id="bsc" class="button">BSC</button>
+                            <button id="alps" class="button">ALPS</button>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view_terminals">
+                <h2>VIEW TERMINALS</h2>
+                <div class="puj">
+                    <div class="jeep">
+                        <h3>Jeep</h3>
+                        <div class="jeep_container">
+                            <button id="toggle" class="button">DISPLAY</button>
+                            <button id="#" class="button">#</button>
+                            <button id="#" class="button"># </button>
+                            <button id="#" class="button"># </button>
+                        </div>
+                    </div>
+                    <div class="bus">
+                        <h3>Bus</h3>
+                        <div class="bus_container">
+                            <button id="#" class="button">#</button>
+                            <button id="#" class="button">#</button>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    
+    
+</body>
+
+</html>
